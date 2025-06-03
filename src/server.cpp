@@ -63,7 +63,6 @@ void handleClient(SOCKET clientSocket) {
     // cout << "Socket closed for a client." << endl;
 }
 
-// main function server (sama seperti di Push 6)
 int main() {
     WSADATA wsa;
     cout << "Initialising Winsock..." << endl;

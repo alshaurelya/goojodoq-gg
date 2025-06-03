@@ -44,12 +44,7 @@ void saveToJSON(const HeartbeatAnomaly& new_anomaly_struct) {
             
             if (temp_json_array.is_array()) {
                 for (const auto& item : temp_json_array) {
-                    // Lakukan validasi sederhana sebelum get, jika perlu
-                    // if (item.contains("timestamp") && item.contains("heartbeat_rate") && item.contains("deviation")) {
                         anomalies_vec.push_back(item.get<HeartbeatAnomaly>());
-                    // } else {
-                    //     std::cerr << "Warning: Skipping invalid anomaly object in JSON." << std::endl;
-                    // }
                 }
             } else if (!temp_json_array.is_null()){ // Handle jika file ada tapi bukan array atau kosong
                  std::cerr << "Warning: Existing " << json_filename << " is not an array. Overwriting." << std::endl;
