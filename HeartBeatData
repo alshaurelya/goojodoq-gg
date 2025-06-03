@@ -1,0 +1,40 @@
+#ifndef HEARTBEAT_DATA_H
+#define HEARTBEAT_DATA_H
+
+#include <chrono>
+#include <string>
+
+// Structure to hold raw heartbeat data
+struct HeartbeatRecord {
+    long long timestamp; // Unix timestamp in milliseconds
+    int heartbeat_rate;
+
+    // For binary serialization/deserialization
+    char to_bytes[sizeof(long long) + sizeof(int)];
+    void serialize() {
+        std::memcpy(to_bytes, &timestamp, sizeof(long long));
+        std::memcpy(to_bytes + sizeof(long long), &heartbeat_rate, sizeof(int));
+    }
+    void deserialize() {
+        std::memcpy(&timestamp, to_bytes, sizeof(long long));
+        std::memcpy(&heartbeat_rate, to_bytes + sizeof(long long), sizeof(int));
+    }
+};
+
+// Structure to hold detected anomalies
+struct HeartbeatAnomaly {
+    long long timestamp;
+    int heartbeat_rate;
+    int deviation; // Difference from normal range
+
+    // For JSON serialization
+    nlohmann::json to_json() const {
+        return {
+            {"timestamp", timestamp},
+            {"heartbeat_rate", heartbeat_rate},
+            {"deviation", deviation}
+        };
+    }
+};
+
+#endif // HEARTBEAT_DATA_H
