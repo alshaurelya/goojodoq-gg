@@ -5,18 +5,17 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-include_directories(include)
-
 # Server target
 add_executable(server
     src/server.cpp
     src/file_utils.cpp
     src/analysis.cpp
 )
-target_include_directories(server PRIVATE include)
-target_link_libraries(server PRIVATE nlohmann_json_bad_name ws2_32) 
+target_include_directories(server PRIVATE include) # nlohmann::json akan ditemukan dari sini
+# Hanya link ws2_32, nlohmann::json adalah header-only
+target_link_libraries(server PRIVATE ws2_32)
 
-
+# Client target
 add_executable(client
     src/client.cpp
 )
