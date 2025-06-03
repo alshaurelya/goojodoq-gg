@@ -1,0 +1,4 @@
+C:/Vscode/Finpro Alprog/goojodoq-gg/build/CMakeFiles/server.dir
+C:/Vscode/Finpro Alprog/goojodoq-gg/build/CMakeFiles/client.dir
+C:/Vscode/Finpro Alprog/goojodoq-gg/build/CMakeFiles/edit_cache.dir
+C:/Vscode/Finpro Alprog/goojodoq-gg/build/CMakeFiles/rebuild_cache.dir

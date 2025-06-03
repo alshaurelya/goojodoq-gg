@@ -1,0 +1,68 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: Configure Project",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}",
+                "-B",
+                "${workspaceFolder}/build"
+                
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Menjalankan fase konfigurasi CMake untuk menyiapkan direktori build."
+        },
+        {
+            "label": "CMake: Build Project",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true 
+            },
+            "problemMatcher": [
+                "$gcc"
+
+            ],
+            "detail": "Membangun proyek menggunakan konfigurasi CMake yang sudah ada di direktori build."
+        },
+        {
+            "label": "CMake: Clean Build Artifacts",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--target",
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Membersihkan file objek dan executable dari direktori build."
+        },
+        {
+            "label": "Utility: Delete Build Folder",
+            "type": "shell",
+            "command": "(Test-Path -Path '${workspaceFolder}/build') | ForEach-Object { if ($_) { Remove-Item -Path '${workspaceFolder}/build' -Recurse -Force; Write-Host 'Build folder deleted.' } else { Write-Host 'Build folder not found.' } }", // PowerShell (Windows)
+            "linux": {
+                "command": "rm",
+                "args": ["-rf", "${workspaceFolder}/build"]
+            },
+            "osx": {
+                "command": "rm",
+                "args": ["-rf", "${workspaceFolder}/build"]
+            },
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Menghapus seluruh direktori 'build'. Gunakan dengan hati-hati."
+        }
+    ]
+}

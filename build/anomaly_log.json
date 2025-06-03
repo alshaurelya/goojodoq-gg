@@ -1,0 +1,222 @@
+[
+    {
+        "deviation": 20,
+        "heartbeat_rate": 120,
+        "timestamp": 1748968177160
+    },
+    {
+        "deviation": 20,
+        "heartbeat_rate": 120,
+        "timestamp": 1748968105398
+    },
+    {
+        "deviation": 19,
+        "heartbeat_rate": 119,
+        "timestamp": 1748968161995
+    },
+    {
+        "deviation": 19,
+        "heartbeat_rate": 119,
+        "timestamp": 1748968112456
+    },
+    {
+        "deviation": 18,
+        "heartbeat_rate": 118,
+        "timestamp": 1748968083178
+    },
+    {
+        "deviation": 18,
+        "heartbeat_rate": 118,
+        "timestamp": 1748968118533
+    },
+    {
+        "deviation": 16,
+        "heartbeat_rate": 116,
+        "timestamp": 1748968157944
+    },
+    {
+        "deviation": 15,
+        "heartbeat_rate": 115,
+        "timestamp": 1748968091262
+    },
+    {
+        "deviation": 15,
+        "heartbeat_rate": 115,
+        "timestamp": 1748968082167
+    },
+    {
+        "deviation": 15,
+        "heartbeat_rate": 115,
+        "timestamp": 1748968106405
+    },
+    {
+        "deviation": 14,
+        "heartbeat_rate": 114,
+        "timestamp": 1748968180180
+    },
+    {
+        "deviation": 14,
+        "heartbeat_rate": 114,
+        "timestamp": 1748968163008
+    },
+    {
+        "deviation": 13,
+        "heartbeat_rate": 113,
+        "timestamp": 1748968147834
+    },
+    {
+        "deviation": 12,
+        "heartbeat_rate": 112,
+        "timestamp": 1748968185223
+    },
+    {
+        "deviation": 12,
+        "heartbeat_rate": 112,
+        "timestamp": 1748968148842
+    },
+    {
+        "deviation": 11,
+        "heartbeat_rate": 111,
+        "timestamp": 1748968099334
+    },
+    {
+        "deviation": -10,
+        "heartbeat_rate": 50,
+        "timestamp": 1748968184210
+    },
+    {
+        "deviation": -10,
+        "heartbeat_rate": 50,
+        "timestamp": 1748968131682
+    },
+    {
+        "deviation": 10,
+        "heartbeat_rate": 110,
+        "timestamp": 1748968071055
+    },
+    {
+        "deviation": -9,
+        "heartbeat_rate": 51,
+        "timestamp": 1748968164019
+    },
+    {
+        "deviation": -8,
+        "heartbeat_rate": 52,
+        "timestamp": 1748968187238
+    },
+    {
+        "deviation": -8,
+        "heartbeat_rate": 52,
+        "timestamp": 1748968165033
+    },
+    {
+        "deviation": 7,
+        "heartbeat_rate": 107,
+        "timestamp": 1748968130672
+    },
+    {
+        "deviation": 7,
+        "heartbeat_rate": 107,
+        "timestamp": 1748968116510
+    },
+    {
+        "deviation": -7,
+        "heartbeat_rate": 53,
+        "timestamp": 1748968194314
+    },
+    {
+        "deviation": 7,
+        "heartbeat_rate": 107,
+        "timestamp": 1748968155918
+    },
+    {
+        "deviation": 6,
+        "heartbeat_rate": 106,
+        "timestamp": 1748968197337
+    },
+    {
+        "deviation": 6,
+        "heartbeat_rate": 106,
+        "timestamp": 1748968176150
+    },
+    {
+        "deviation": 6,
+        "heartbeat_rate": 106,
+        "timestamp": 1748968169071
+    },
+    {
+        "deviation": 6,
+        "heartbeat_rate": 106,
+        "timestamp": 1748968126623
+    },
+    {
+        "deviation": 6,
+        "heartbeat_rate": 106,
+        "timestamp": 1748968119543
+    },
+    {
+        "deviation": 5,
+        "heartbeat_rate": 105,
+        "timestamp": 1748968136735
+    },
+    {
+        "deviation": 5,
+        "heartbeat_rate": 105,
+        "timestamp": 1748968173116
+    },
+    {
+        "deviation": 4,
+        "heartbeat_rate": 104,
+        "timestamp": 1748968189259
+    },
+    {
+        "deviation": 4,
+        "heartbeat_rate": 104,
+        "timestamp": 1748968154908
+    },
+    {
+        "deviation": -4,
+        "heartbeat_rate": 56,
+        "timestamp": 1748968093277
+    },
+    {
+        "deviation": -3,
+        "heartbeat_rate": 57,
+        "timestamp": 1748968072058
+    },
+    {
+        "deviation": 3,
+        "heartbeat_rate": 103,
+        "timestamp": 1748968081158
+    },
+    {
+        "deviation": 3,
+        "heartbeat_rate": 103,
+        "timestamp": 1748968117523
+    },
+    {
+        "deviation": -2,
+        "heartbeat_rate": 58,
+        "timestamp": 1748968086205
+    },
+    {
+        "deviation": -2,
+        "heartbeat_rate": 58,
+        "timestamp": 1748968167054
+    },
+    {
+        "deviation": 2,
+        "heartbeat_rate": 102,
+        "timestamp": 1748968188250
+    },
+    {
+        "deviation": 1,
+        "heartbeat_rate": 101,
+        "timestamp": 1748968089237
+    },
+    {
+        "deviation": -1,
+        "heartbeat_rate": 59,
+        "timestamp": 1748968181180
+    }
+]
