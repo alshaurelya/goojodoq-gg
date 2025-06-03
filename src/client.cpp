@@ -3,13 +3,11 @@
 #include <string>
 #include <chrono> // Untuk timestamp milidetik
 #include <thread>
-// #include <vector> // Tidak digunakan secara langsung di client ini
 #include <cstdlib> // Untuk rand, srand
 #include <ctime>   // Untuk time
 
 #pragma comment(lib, "ws2_32.lib")
 
-// using namespace std; // Sebaiknya dihindari di global scope
 using std::cout;
 using std::cerr;
 using std::endl;

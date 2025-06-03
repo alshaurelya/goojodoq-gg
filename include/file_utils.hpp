@@ -1,5 +1,10 @@
-#pragma once
-#include "data.hpp"
+#ifndef FILE_UTILS_HPP
+#define FILE_UTILS_HPP
 
-void saveToBinary(const HeartbeatData& data);
-void saveToJSON(const AnomalyRecord& record);
+#include "HeartBeatData.h"
+
+
+void saveToBinary(const HeartbeatRecord& data);
+void saveToJSON(const HeartbeatAnomaly& anomaly);
+
+#endif

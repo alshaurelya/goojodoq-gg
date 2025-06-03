@@ -3,11 +3,11 @@
 #include <iostream>
 #include <mutex>
 #include <vector> // Untuk menyimpan array anomali dari JSON
-#include "nlohmann/json.hpp" // Pastikan ini di-include
+#include "nlohmann/json.hpp"
 
 using json = nlohmann::json;
 
-namespace { // Anonymous namespace
+namespace {
     std::mutex file_mutex;
     const char* binary_filename = "data_log.bin";
     const char* json_filename = "anomaly_log.json";
@@ -28,20 +28,17 @@ void saveToBinary(const HeartbeatRecord& data) {
 
 void saveToJSON(const HeartbeatAnomaly& new_anomaly) {
     std::lock_guard<std::mutex> lock(file_mutex);
-    json anomalies_json_array = json::array(); // Defaultnya array kosong
+    json anomalies_json_array = json::array(); // default array kosong
 
-    // 1. Coba baca file JSON yang ada
+    // membaca file JSON yang ada
     std::ifstream infile(json_filename);
     if (infile.is_open()) {
         try {
-            // Hanya parse jika file tidak kosong
             if (infile.peek() != std::ifstream::traits_type::eof()) {
                  infile >> anomalies_json_array;
             }
-            // Pastikan itu adalah array
             if (!anomalies_json_array.is_array()) {
-                // Jika file ada tapi bukan array (misal file JSON lama yang error), timpa
-                if (!anomalies_json_array.is_null()) { // is_null jika file kosong atau tidak valid
+                if (!anomalies_json_array.is_null()) {
                      std::cerr << "Warning: Existing " << json_filename << " is not an array. Overwriting." << std::endl;
                 }
                 anomalies_json_array = json::array();
@@ -53,19 +50,18 @@ void saveToJSON(const HeartbeatAnomaly& new_anomaly) {
         infile.close();
     }
 
-    // 2. Tambahkan anomali baru ke array
-    json anomaly_obj = new_anomaly; // Menggunakan konversi otomatis dari NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+    // menambah anomali baru ke array
+    json anomaly_obj = new_anomaly;
     anomalies_json_array.push_back(anomaly_obj);
 
-    // 3. Tulis kembali seluruh array ke file JSON
-    std::ofstream outfile(json_filename, std::ios::trunc); // Timpa file lama
+    // menulis kembali seluruh array ke file JSON
+    std::ofstream outfile(json_filename, std::ios::trunc); // menimpa file lama
     if (!outfile) {
         std::cerr << "Error: Unable to open JSON file for writing: " << json_filename << std::endl;
         return;
     }
-    outfile << anomalies_json_array.dump(4); // dump(4) untuk pretty print dengan indentasi 4 spasi
+    outfile << anomalies_json_array.dump(4);
     if (!outfile) {
         std::cerr << "Error: Failed to write data to JSON file." << std::endl;
     }
-    // outfile.close(); // Menutup otomatis
 }
