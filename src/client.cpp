@@ -4,11 +4,16 @@
 #include <thread>
 #include <cstdlib>
 
+using namespace std;
+
 #pragma comment(lib, "ws2_32.lib")
 
 int main() {
     WSADATA wsa;
     WSAStartup(MAKEWORD(2, 2), &wsa);
+
+    cout <<"test";
+
 
     SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
     sockaddr_in serverAddr = {AF_INET, htons(8888)};
