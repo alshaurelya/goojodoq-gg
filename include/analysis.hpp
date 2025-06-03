@@ -1,4 +1,9 @@
-#pragma once
-#include "data.hpp"
+#ifndef ANALYSIS_HPP
+#define ANALYSIS_HPP
 
-bool isAnomaly(const HeartbeatData& data, AnomalyRecord& outRecord);
+#include "HeartBeatData.h" // Menggunakan struktur data baru
+
+// Deklarasi fungsi isAnomaly
+bool isAnomaly(const HeartbeatRecord& data, HeartbeatAnomaly& outRecord);
+
+#endif // ANALYSIS_HPP
